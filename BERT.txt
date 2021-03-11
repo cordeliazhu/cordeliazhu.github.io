@@ -22,4 +22,4 @@ BERT自监督模型
 7.  BERT是transformer的encoder部分，得到的是向量的表示形式，不需要标签有预料就可以了
 8.  【SEP】两个橘子之间的连接符，【CLS】表示要做分类的向量
 9.  使用BERT  i.e.阅读理解题，输入文章和问题输出为理解答案的位置； 需要分别计算答案的启示和终止位置，单独对end索引做训练，end的特征向量对文章中的每个词做dot product(内积）softmax得到概率最大的为end=====训练出编码器
-10. 
+10. q，k，v分别是query，key，value，对于encoder self-attention，第一次计算的初始值是每个字的embedding，q用来和k做点乘计算相似度，这些相似度经过softmax变成权重，然后权重和v相乘，其实就是v的一个加权平均。如果是encoder-decoder attention，q是decoder的hidden state，k和v是encoder各个位置的hidden state。
