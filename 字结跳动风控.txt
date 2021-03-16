@@ -15,3 +15,18 @@ WordPiece是指将单词划分成一组有限的公共子词单元，能在单�
 
 6.BERT的损失函数是啥
 cross entropy对分类， MSE对huigui
+
+#################二面
+1. Python的全局局部
+	class variable：
+		def __init__(self, a):
+			self.a = "我是类变量"
+		def showvariable(self):
+			self.b = "我函数变量"
+			print(self.a)
+			print(b)
+	variable(1).showvariable()
+	如果名称相同，函数优先级将会使用局部变量
+2. .copy()又忘记了
+3. 字节有毒
+4. 全排列问题（就是回朔法）
