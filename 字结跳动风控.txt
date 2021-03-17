@@ -27,6 +27,28 @@ cross entropy对分类， MSE对huigui
 			print(b)
 	variable(1).showvariable()
 	如果名称相同，函数优先级将会使用局部变量
-2. .copy()又忘记了
+2. .copy()又忘记了 leetcode 46题
+class Solution(object):
+    def permute(self, num):
+        self.res = []
+        if len(num) < 1:
+            return [[]]
+        self.backtrack( num.copy(), 0)
+        return self.res
+    def backtrack(self, num, a):
+        if (a == n):
+            if num[:] not in self.res:
+                self.res.append(num[:])
+         
+        for i in range(a,n):
+            num[i],num[a] = num[a], num[i]
+            self.backtrack(num, a+1)
+            
+            num[i],num[a] = num[a], num[i]
+if __name__ == "__main__":
+    nums = [1,1,2]
+    n = len(nums)       
+    S = Solution()       
+    print(S.permute(nums))
 3. 字节有毒
 4. 全排列问题（就是回朔法）
